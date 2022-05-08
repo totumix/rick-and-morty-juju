@@ -1,0 +1,15 @@
+<div class="modal" *ngIf="visible">
+    <div class="modal__content">
+        <div class="modal__close" (click)="onNoClick()"></div>
+        <div class=" pdd-y-40">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <strong>{{location.name}}</strong>
+                <div class="contenedor">
+                    <p><strong>Dimension : </strong>{{location.dimension}}</p>
+                    <p><strong>Type : </strong>{{location.type}}</p>
+                    <p><strong>Created : </strong>{{location.created | date:'fullDate' }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

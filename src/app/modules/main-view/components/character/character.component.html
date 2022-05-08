@@ -1,0 +1,16 @@
+<div class="row" *ngIf="character">
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 u-pointer" [routerLink]="['./character-details', character.id]">
+        <img width="100%" src="{{character.image}}">
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 pdd-10 ">
+        <strong>{{character.name}}</strong>
+        <p class="u-pointer" (click)="showLocation(character?.location?.url)">
+            <strong>Location : </strong>{{character.location.name}}
+        </p>
+        <p><strong>Species : </strong>{{character.species}}</p>
+        <p><strong>Status : </strong>{{character.status}}</p>
+        <p><strong>Created : </strong>{{character.created | date:'fullDate' }}</p>
+        <p><strong>Gender : </strong>{{character.gender}}</p>
+    </div>
+</div>
+<ng-container #viewMore></ng-container>
